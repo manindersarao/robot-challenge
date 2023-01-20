@@ -45,7 +45,7 @@ export class PlacementCommand implements Command {
 export class MovementCommand implements Command {
   constructor(private _robot: ToyRobot) {}
 
-  public execute(parameter: CommandParameter, handlers: CommandHandlers): void {
+  public execute(): void {
     if (this.movementIsAllowed()) {
       this._robot.step(1);
     }
@@ -59,7 +59,7 @@ export class MovementCommand implements Command {
 export class LeftTurnCommand implements Command {
   constructor(private _robot: ToyRobot) {}
 
-  public execute(parameter: CommandParameter, handlers: CommandHandlers): void {
+  public execute(): void {
     this._robot.turnLeft();
   }
 }
@@ -67,7 +67,7 @@ export class LeftTurnCommand implements Command {
 export class RightTurnCommand implements Command {
   constructor(private _robot: ToyRobot) {}
 
-  public execute(parameter: CommandParameter, handlers: CommandHandlers): void {
+  public execute(): void {
     this._robot.turnRight();
   }
 }
