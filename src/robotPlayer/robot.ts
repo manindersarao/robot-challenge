@@ -1,8 +1,11 @@
-import { CompassDirection, MovementDirection, TurnDirection } from "../enums/movementEnums";
+import {
+  CompassDirection,
+  MovementDirection,
+  TurnDirection,
+} from "../enums/movementEnums";
 import { Orientation, Position } from "../interfaces/interfaces";
 import TrackMovements from "../movements/trackMovements";
 import Table from "../table/tableTop";
-
 
 export default class ToyRobot {
   private _activeMovement: TrackMovements;
@@ -107,11 +110,13 @@ export default class ToyRobot {
 
   private getCurrentDirection(): CompassDirection {
     if (this._activeMovement === this._verticalMovement) {
-      return this._activeMovement.currentMovement() === MovementDirection.Forward
+      return this._activeMovement.currentMovement() ===
+        MovementDirection.Forward
         ? CompassDirection.North
         : CompassDirection.South;
     } else if (this._activeMovement === this._horizontalMovement) {
-      return this._activeMovement.currentMovement() === MovementDirection.Forward
+      return this._activeMovement.currentMovement() ===
+        MovementDirection.Forward
         ? CompassDirection.East
         : CompassDirection.West;
     } else {

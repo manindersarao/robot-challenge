@@ -1,9 +1,15 @@
 {
-  "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
-    "declaration": true,
-    "outDir": "dist"
-  },
-  "include": ["src/**/*"],
-  "exclude": ["coverage", "dist", "node_modules", "test"]
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es6"],
+    "allowJs": true,
+    "outDir": "build",
+    "rootDir": "src",
+    "strict": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strictNullChecks": true
+  }
 }
